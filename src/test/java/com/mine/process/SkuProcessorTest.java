@@ -7,6 +7,9 @@ import java.util.HashMap;
 import org.junit.jupiter.api.Test;
 
 public class SkuProcessorTest {
+	/**
+	 * Scenario A
+	 */
 	@Test
 	public void test1() {
 		HashMap<String, SkuDetails> cart = new HashMap<>();
@@ -20,6 +23,9 @@ public class SkuProcessorTest {
 		assertEquals(100, processor.processTotal(cart));
 	}
 
+	/**
+	 * Scenario B
+	 */
 	@Test
 	public void test2() {
 		HashMap<String, SkuDetails> cart = new HashMap<>();
@@ -36,6 +42,10 @@ public class SkuProcessorTest {
 		SkuProcessor processor = new SkuProcessor();
 		assertEquals(370, processor.processTotal(cart));
 	}
+
+	/**
+	 * Scenario C
+	 */
 	@Test
 	public void test3() {
 		HashMap<String, SkuDetails> cart = new HashMap<>();
