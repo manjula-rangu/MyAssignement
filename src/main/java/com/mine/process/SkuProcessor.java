@@ -2,6 +2,11 @@ package com.mine.process;
 
 import java.util.HashMap;
 
+/**
+ * @author Manjula
+ * SKU operations - methods
+ *
+ */
 public class SkuProcessor {
 public int processTotal(HashMap<String, SkuDetails> cart) {
 	int total=0;
@@ -10,7 +15,6 @@ public int processTotal(HashMap<String, SkuDetails> cart) {
 		int count=sku.getCount();
 		if(sku.getComboId()!=null) {
 			SkuDetails combosku=cart.get(sku.getComboId());
-			int comboCount=combosku.getCount();
 			combosku.setCount(0);
 			cart.put(sku.getComboId(), combosku);
 			total=total+sku.getCount()*sku.getComboPrice();

@@ -1,5 +1,11 @@
 package com.mine.process;
 
+
+/**
+ * @author Manjula
+ * SKU details - model
+ *
+ */
 public class SkuDetails {
 
 	private int count;
